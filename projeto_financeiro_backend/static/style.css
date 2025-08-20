@@ -1,0 +1,234 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        h1, h2 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-section {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input[type="number"], .form-group input[type="date"], .form-group input[type="text"], .form-group select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .form-group button {
+            background-color: #2ecc71;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+        .form-group button:hover {
+            background-color: #27ae60;
+        }
+        .totals-section {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .total-box {
+            background-color: #f7f9f9;
+            padding: 15px 20px;
+            border-radius: 8px;
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.03);
+        }
+        .total-box h3 {
+            margin-top: 0;
+            color: #7f8c8d;
+            font-size: 1em;
+        }
+        .total-box p {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+        .total-box.gains p { color: #27ae60; }
+        .total-box.expenses p { color: #e74c3c; }
+        .total-box.final p { color: #3498db; }
+        .spending-analysis-section {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border: 1px solid #e3e3e3;
+        }
+        .spending-analysis-section h2 {
+            text-align: left;
+            font-size: 1.5em;
+        }
+        .category-spending-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .category-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 5px;
+            border-bottom: 1px solid #eee;
+        }
+        .category-item:last-child {
+            border-bottom: none;
+        }
+        .category-info {
+            flex: 1;
+            font-weight: bold;
+            color: #34495e;
+        }
+        .category-amount {
+            flex: 0 0 120px;
+            text-align: right;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        .bar-container {
+            flex: 1;
+            height: 15px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            margin: 0 15px;
+        }
+        .bar-fill {
+            height: 100%;
+            background-color: #e74c3c;
+            border-radius: 10px;
+            transition: width 0.5s ease-in-out;
+        }
+        .actions-section {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #e3e3e3;
+        }
+        .actions-section h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-align: left;
+            font-size: 1.5em;
+        }
+        .actions-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .filters-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            flex: 3;
+            align-items: flex-end;
+        }
+        .import-export-danger-zone {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            flex: 2;
+        }
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            min-width: 150px;
+        }
+        .action-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        .filter-group label {
+            margin-bottom: 5px;
+            font-weight: normal;
+            color: #555;
+        }
+        .filter-group input, .filter-group select, .action-button {
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .action-button, .filter-button {
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            height: 38px;
+            flex-grow: 1;
+        }
+        .filter-button { background-color: #3498db; padding: 8px 20px; }
+        .filter-button:hover { background-color: #2980b9; }
+        .action-button.export { background-color: #1abc9c; }
+        .action-button.export:hover { background-color: #16a085; }
+        .action-button.import { background-color: #9b59b6; }
+        .action-button.import:hover { background-color: #8e44ad; }
+        .action-button.danger { background-color: #e74c3c; }
+        .action-button.danger:hover { background-color: #c0392b; }
+        #import-csv-input { display: none; }
+        .transactions-section { background-color: #ecf0f1; padding: 20px; border-radius: 8px; margin-bottom: 30px; }
+        .transactions-table { width: 100%; border-collapse: collapse; }
+        .transactions-table th, .transactions-table td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        .transactions-table th { background-color: #bdc3c7; font-weight: bold; color: #333; }
+        .transactions-table tr:nth-child(even) { background-color: #f2f2f2; }
+        .action-btn { padding: 5px 10px; border: none; border-radius: 4px; cursor: pointer; font-size: 0.9em; color: white; margin-right: 5px; transition: background-color 0.3s ease; }
+        .delete-btn { background-color: #e74c3c; }
+        .delete-btn:hover { background-color: #c0392b; }
+        .edit-btn { background-color: #3498db; }
+        .edit-btn:hover { background-color: #2980b9; }
+        .save-btn { background-color: #2ecc71; }
+        .save-btn:hover { background-color: #27ae60; }
+        .transactions-table input, .transactions-table select { width: 95%; padding: 6px; border: 1px solid #95a5a6; border-radius: 3px; }
+        .pagination-container { display: flex; justify-content: center; align-items: center; padding: 20px 0 10px 0; }
+        .page-btn { background-color: #fff; border: 1px solid #bdc3c7; color: #34495e; padding: 8px 14px; margin: 0 4px; cursor: pointer; border-radius: 4px; transition: background-color 0.3s, color 0.3s; }
+        .page-btn:hover { background-color: #3498db; color: #fff; border-color: #3498db; }
+        .page-btn.active { background-color: #2980b9; color: #fff; border-color: #2980b9; }
+        .page-btn:disabled { background-color: #ecf0f1; color: #bdc3c7; cursor: not-allowed; border-color: #ddd; }
+        .monthly-reports-section { background-color: #ecf0f1; padding: 20px; border-radius: 8px; }
+        .month-report-card { background-color: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05); }
+        .month-report-card h3 { margin-top: 0; color: #34495e; font-size: 1.5em; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 15px; }
+        .month-summary { display: flex; justify-content: space-around; gap: 10px; margin-bottom: 15px; flex-wrap: wrap; }
+        .month-summary div { background-color: #f7f9f9; padding: 10px 15px; border-radius: 5px; text-align: center; flex: 1; min-width: 120px; }
+        .month-summary div p { margin: 0; font-weight: bold; }
+        .month-summary .gains-sum { color: #27ae60; }
+        .month-summary .expenses-sum { color: #e74c3c; }
+        .month-summary .balance-sum { color: #3498db; }
