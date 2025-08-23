@@ -1,10 +1,10 @@
 # Adicionamos 'request' para receber os dados do frontend
 from flask import Flask, jsonify, request, render_template
 from flask_sqlalchemy import SQLAlchemy
-from flask_cors import CORS # <-- ADICIONE ESTA LINHA
+from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app) # <-- E ADICIONE ESTA LINHA
+CORS(app)
 
 # --- CONFIGURAÇÃO DO BANCO DE DADOS ---
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
@@ -21,9 +21,6 @@ class Transacao(db.Model):
 
     # --- MODELO DA TABELA ---
 class Transacao(db.Model):
-    # ... (as definições das colunas continuam as mesmas) ...
-
-    # Substitua a função to_dict por esta:
     def to_dict(self):
         return {
             'id': self.id,
@@ -122,3 +119,4 @@ def pagina_inicial():
 
     # Retorna uma resposta de sucesso com os dados da transação criada
     return jsonify(nova_transacao.to_dict()), 201
+
